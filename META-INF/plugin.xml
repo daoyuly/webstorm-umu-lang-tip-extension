@@ -1,0 +1,59 @@
+<idea-plugin version="2">
+  <id>com.karateca.elementorIdea</id>
+  <name>elementor</name>
+  <version>1.0</version>
+  <vendor email="code@karateca.com" url="http://www.andresdominguez.com">Andres Dominguez</vendor>
+
+  <description><![CDATA[
+    <h1>elementor</h1>
+    <p>
+      A plugin to connect to <a href="https://github.com/andresdominguez/elementor">elementor</a>
+      an improved element explorer for Protractor.
+    </p>
+    <h2>Instructions</h2>
+    <ul>
+      <li>Start elementor</li>
+      <li>Select a locator or expression that you test against Protractor</li>
+      <li>Press SHIFT Ctrl P (Command SHIFT P on a Mac) or right click and select "Test selected
+        locator" to run.
+      </li>
+      <li>See the results in a popup</li>
+    </ul>
+    ]]></description>
+
+  <change-notes><![CDATA[
+    Version 1.0: Initial version.
+    ]]>
+  </change-notes>
+
+  <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+  <idea-version since-build="131"/>
+
+ <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <application-components>
+    <!-- Add your application components here -->
+  </application-components>
+
+  <project-components>
+    <!-- Add your project components here -->
+  </project-components>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="TestLocator" class="com.karateca.protractor.TestLocatorAction"
+            text="Test selected locator"
+            description="Test the selected locator with the element explorer"
+            icon="/protractorIcon.png">
+      <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl P"/>
+      <keyboard-shortcut keymap="Mac OS X" first-keystroke="shift meta P"/>
+      <keyboard-shortcut keymap="Mac OS X 10.5+" first-keystroke="shift meta P"/>
+      <add-to-group group-id="EditorPopupMenu"/>
+    </action>
+  </actions>
+
+</idea-plugin>
