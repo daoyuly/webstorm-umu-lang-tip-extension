@@ -1,6 +1,6 @@
 <idea-plugin version="2">
-  <id>com.karateca.elementorIdea</id>
-  <name>elementor</name>
+  <id>com.karateca.elementorIdea1</id>
+  <name>testOK</name>
   <version>1.0</version>
   <vendor email="code@karateca.com" url="http://www.andresdominguez.com">Andres Dominguez</vendor>
 
@@ -46,8 +46,8 @@
   <actions>
     <!-- Add your actions here -->
     <action id="TestLocator" class="com.karateca.protractor.TestLocatorAction"
-            text="select lang num"
-            description="select lang num,eg.lang_38"
+            text="多语占位符提示"
+            description="Test the selected locator with the element explorer"
             icon="/umu.png">
       <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl P"/>
       <keyboard-shortcut keymap="Mac OS X" first-keystroke="shift meta P"/>
