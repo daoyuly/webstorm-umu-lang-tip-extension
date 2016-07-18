@@ -24,8 +24,8 @@ umu提示多语言工具，针对多语言的占位符给出中文的多语
 
 ## 插件的开发
 
-1 安装intelliJ IDEA
-2 新建 project - IntelliJ Platform Plugin
-3 完成新建项目后，设置 Project Structure 中的Artisacts 为empty的jar包
-4 后面写代码，build jar吧
-5 安装使用
+- 安装intelliJ IDEA
+- 新建 project - IntelliJ Platform Plugin
+- 完成新建项目后，设置 Project Structure 中的Artisacts 为empty的jar包
+- 后面写代码，build jar吧
+- 安装使用
