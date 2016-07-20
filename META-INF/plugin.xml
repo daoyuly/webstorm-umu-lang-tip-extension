@@ -1,59 +1,57 @@
 <idea-plugin version="2">
-  <id>com.karateca.elementorIdea</id>
-  <name>elementor</name>
-  <version>1.0</version>
-  <vendor email="code@karateca.com" url="http://www.andresdominguez.com">Andres Dominguez</vendor>
+    <id>com.umu.langtip</id>
+    <name>lang tip</name>
+    <version>1.0</version>
+    <vendor email="daoyu@umu.com" url="http://www.fleven.com">daoyuly</vendor>
 
-  <description><![CDATA[
-    <h1>elementor</h1>
+    <description><![CDATA[
+    <h1>language text tip</h1>
     <p>
-      A plugin to connect to <a href="https://github.com/andresdominguez/elementor">elementor</a>
-      an improved element explorer for Protractor.
+     umu内部开发插件,快速提示多语言词条占位符所表示的中文意思,方便开发使用
     </p>
-    <h2>Instructions</h2>
+    <h2>使用</h2>
     <ul>
-      <li>Start elementor</li>
-      <li>Select a locator or expression that you test against Protractor</li>
-      <li>Press SHIFT Ctrl P (Command SHIFT P on a Mac) or right click and select "Test selected
-        locator" to run.
+      <li>选中占位符lang_xxx</li>
+
+      <li>按下 SHIFT Ctrl P (Command SHIFT P on a Mac) 或者右键点击"多语言占位符提示"
       </li>
-      <li>See the results in a popup</li>
+      <li>代码窗口显示红色hint提示</li>
     </ul>
     ]]></description>
 
-  <change-notes><![CDATA[
+    <change-notes><![CDATA[
     Version 1.0: Initial version.
     ]]>
-  </change-notes>
+    </change-notes>
 
-  <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
-  <idea-version since-build="131"/>
+    <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+    <idea-version since-build="131"/>
 
- <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.platform</depends>
 
-  <extensions defaultExtensionNs="com.intellij">
-    <!-- Add your extensions here -->
-  </extensions>
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
 
-  <application-components>
-    <!-- Add your application components here -->
-  </application-components>
+    <application-components>
+        <!-- Add your application components here -->
+    </application-components>
 
-  <project-components>
-    <!-- Add your project components here -->
-  </project-components>
+    <project-components>
+        <!-- Add your project components here -->
+    </project-components>
 
-  <actions>
-    <!-- Add your actions here -->
-    <action id="TestLocator" class="com.karateca.protractor.TestLocatorAction"
-            text="Test selected locator"
-            description="Test the selected locator with the element explorer"
-            icon="/protractorIcon.png">
-      <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl P"/>
-      <keyboard-shortcut keymap="Mac OS X" first-keystroke="shift meta P"/>
-      <keyboard-shortcut keymap="Mac OS X 10.5+" first-keystroke="shift meta P"/>
-      <add-to-group group-id="EditorPopupMenu"/>
-    </action>
-  </actions>
+    <actions>
+        <!-- Add your actions here -->
+        <action id="TestLocator" class="com.karateca.protractor.TestLocatorAction"
+                text="多语占位符提示"
+                description="Test the selected locator with the element explorer"
+                icon="/umu.png">
+            <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl P"/>
+            <keyboard-shortcut keymap="Mac OS X" first-keystroke="shift meta P"/>
+            <keyboard-shortcut keymap="Mac OS X 10.5+" first-keystroke="shift meta P"/>
+            <add-to-group group-id="EditorPopupMenu"/>
+        </action>
+    </actions>
 
 </idea-plugin>

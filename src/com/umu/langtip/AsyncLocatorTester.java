@@ -1,4 +1,4 @@
-package com.karateca.protractor;
+package com.umu.langtip;
 
 import com.intellij.openapi.util.Pair;
 import com.intellij.util.EventDispatcher;

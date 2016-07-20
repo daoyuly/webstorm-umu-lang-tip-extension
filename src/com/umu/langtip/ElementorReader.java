@@ -1,4 +1,4 @@
-package com.karateca.protractor;
+package com.umu.langtip;
 
 
 import java.io.BufferedReader;

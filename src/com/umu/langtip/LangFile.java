@@ -2,7 +2,7 @@
  * Created by liudaoyu on 16/7/16.
  */
 
-package com.karateca.protractor;
+package com.umu.langtip;
 
 import java.io.BufferedReader;
 import java.io.IOException;

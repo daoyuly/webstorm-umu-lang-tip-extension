@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+
+  <title>Web Workers basic example</title>
+
+  <script>
+    function ajaxType() {
+      var blob = new Blob(["Hello, world!"], {type: 'text/plain'});
+      var blobUrl = URL.createObjectURL(blob);
+
+      var xhr = new XMLHttpRequest;
+      xhr.responseType = 'blob';
+
+      xhr.onload = function () {
+        var recoveredBlob = xhr.response;
+
+        var reader = new FileReader;
+
+        reader.onload = function () {
+          var blobAsDataUrl = reader.result;
+          window.location = blobAsDataUrl;
+        };
+
+        reader.readAsDataURL(recoveredBlob);
+      };
+
+      xhr.open('GET', blobUrl);
+      xhr.send();
+    }
+
+    function imgType() {
+      var demo ='blob:https%3A//www.youtube.com/2f25085b-82f6-414b-a5cf-e20566d7cc1a';
+      var arrayBufferWithPNG = 'dddd';
+      var blob = new Blob([], {type: "image/png"}),
+        url = URL.createObjectURL(blob),
+        img = new Image();
+
+      img.onload = function() {
+        URL.revokeObjectURL(this.src);     // clean-up memory
+        document.body.appendChild(this);   // adds image to DOM
+      }
+
+      img.src = url;
+    }
+
+    function display(vid){
+
+      var video = document.getElementById("video");
+      video.src = window.URL.createObjectURL(vid);
+
+    }
+
+
+  </script>
+
+</head>
+
+<body>
+
+<button type="text" onclick="ajaxType()">ajaxType</button>
+<button type="text" onclick="imgType()">imgType</button>
+
+
+
+
+<%=lang_12%>
+
+</body>
+
+</html>

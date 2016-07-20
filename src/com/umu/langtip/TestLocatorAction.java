@@ -1,4 +1,4 @@
-package com.karateca.protractor;
+package com.umu.langtip;
 
 import com.intellij.codeInsight.hint.HintManager;
 import com.intellij.openapi.actionSystem.AnAction;
